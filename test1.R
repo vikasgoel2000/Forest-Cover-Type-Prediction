@@ -59,6 +59,11 @@ test1<-test[,1]
 test<-test[,-1]
 str(test)
 
+
+test[,7:9]<-sapply(test[,7:9],fun)
+
+str(test)
+
 predict<-predict(mrf1,newdata=test)
 
 predict<-as.data.frame(predict)
