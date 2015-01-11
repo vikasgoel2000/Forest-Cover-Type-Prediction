@@ -24,7 +24,13 @@ train[,7:9]<-sapply(train[,7:9],fun)
 
 str(train)
 
+library(psych)
 
+pairs.panels(train[,1:10])
+
+# this was to visualise the relationship between the vectors. 
+#finding corelation between one and another... very imp part as 
+#it help in eleminiating the multi collinearity in the dataframe and help in vector selection
 
 library(randomForest)
 
